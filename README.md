@@ -9,19 +9,19 @@ Pensada para ser visual, accesible e interactiva para todo tipo de usuarios.
 
 🔧 Tecnologías:
 
-HTML5 + CSS3 (responsive y moderno)
+-HTML5 + CSS3 (responsive y moderno)
 
-JavaScript (ES6+)
+-JavaScript (ES6+)
 
-Chart.js para gráficos de temperatura
+-Chart.js para gráficos de temperatura
 
-SpeechSynthesis API para asistencia por voz
+-SpeechSynthesis API para asistencia por voz
 
-tsParticles para efectos animados según el clima
+-tsParticles para efectos animados según el clima
 
-API de geolocalización del navegador
+-API de geolocalización del navegador
 
-API externa de pronóstico del clima (como WeatherAPI o similar)
+-API externa de pronóstico del clima (como WeatherAPI o similar)
 
 
 
