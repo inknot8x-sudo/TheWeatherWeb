@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!city) return;
 
     resultDiv.classList.add("hidden");
-    resultDiv.innerHTML = "⏳ Buscando el clima...";
+    resultDiv.innerHTML = " Buscando el clima...";
 
     try {
       const response = await fetch(`http://localhost:3000/api/weather?city=${encodeURIComponent(city)}`);
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
       reproducirSonido(data.condicion.toLowerCase());
 
     } catch (err) {
-      resultDiv.innerHTML = `<p>⚠️ Error de conexión con el servidor.</p>`;
+      resultDiv.innerHTML = `<p>Error de conexión con el servidor.</p>`;
       resultDiv.classList.remove("hidden");
       console.error(err);
     }
@@ -189,7 +189,7 @@ function reproducirSonido(clima) {
   currentAudio.volume = 0.4;
 
   currentAudio.play().catch(err => {
-    console.warn("🎧 Error de reproducción:", err);
+    console.warn("Error de reproducción:", err);
   });
 }
 
@@ -201,11 +201,11 @@ navigator.geolocation.getCurrentPosition(async (position) => {
     const response = await fetch(`http://localhost:3000/api/forecast?lat=${lat}&lon=${lon}`);
     const forecastData = await response.json();
 
-    console.log("🌤️ Pronóstico recibido:", forecastData);
+    console.log("Pronóstico recibido:", forecastData);
     
 
   } catch (err) {
-    console.error("❌ Error al obtener pronóstico:", err);
+    console.error("Error al obtener pronóstico:", err);
   }
 });
 
@@ -253,15 +253,15 @@ window.addEventListener("DOMContentLoaded", () => {
           mostrarGraficoHoras(siguientesHoras);
 
         } catch (err) {
-          console.error("❌ Error al obtener pronóstico:", err);
+          console.error("Error al obtener pronóstico:", err);
         }
       },
       (error) => {
-        console.error("⛔ Error de geolocalización:", error);
+        console.error("Error de geolocalización:", error);
       }
     );
   } else {
-    console.warn("⚠️ Geolocalización no disponible");
+    console.warn("Geolocalización no disponible");
   }
 });
 

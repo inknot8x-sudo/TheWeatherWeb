@@ -60,7 +60,7 @@ app.get('/api/forecast', async (req, res) => {
 
     res.json(data);
   } catch (err) {
-    console.error("❌ Error al obtener pronóstico:", err);
+    console.error("Error al obtener pronóstico:", err);
     res.status(500).json({ error: 'Error al obtener datos del pronóstico' });
   }
 });
@@ -70,5 +70,5 @@ app.use(express.static(path.join(__dirname, "../public")));
 
 
 app.listen(PORT, () => {
-  console.log(`✅ Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
