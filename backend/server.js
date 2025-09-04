@@ -11,7 +11,6 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 
-// ✅ 1. Primero definimos las rutas de API
 app.get("/api/weather", async (req, res) => {
   const city = req.query.city;
   const API_KEY = process.env.WEATHER_API_KEY;
@@ -66,11 +65,10 @@ app.get('/api/forecast', async (req, res) => {
   }
 });
 
-// ✅ 2. Después sirves los archivos estáticos (frontend)
 app.use(express.static(path.join(__dirname, "../frontend")));
 app.use(express.static(path.join(__dirname, "../public")));
 
-// ✅ 3. Finalmente lanzas el servidor
+
 app.listen(PORT, () => {
   console.log(`✅ Servidor corriendo en http://localhost:${PORT}`);
 });

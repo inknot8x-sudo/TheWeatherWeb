@@ -8,6 +8,7 @@
 </head>
 <body>
     <div id="particles-container"></div>
+    <button id="toggleVoiceBtn" class="voice-btn">🔊 Voz activada</button>
     <div class="container">
         <h1>Consulta el Clima</h1>
         <form id="weatherForm" class="search-container">
@@ -25,23 +26,38 @@
             </button>
         </form>
         <div id="result" class="result hidden"></div>
+
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
     <script src="script.js" defer></script>
 
     <section id="forecast" class="forecast-section hidden">
-        <h2>📅 Pronóstico</h2>
+        <h2>Pronóstico</h2>
 
         <div class="forecast-block">
             <h3>Hoy</h3>
             <div id="hourlyForecast" class="forecast-grid"></div>
         </div>
 
+        <div class="chart-container">
+            <canvas id="tempChart"></canvas>
+        </div>
+
         <div class="forecast-block">
             <h3>Próximos días</h3>
+            <p>(Click en los diagramas para ver mejor)</p>
             <div id="dailyForecast" class="forecast-grid"></div>
         </div>
     </section>
+
+    <div id="chartModal" class="modal hidden">
+        <div class="modal-content">
+            <span id="closeModal">&times;</span>
+            <canvas id="fullChart"></canvas>
+        </div>
+    </div>
 
 </body>
 
