@@ -175,7 +175,7 @@ function reproducirSonido(clima) {
   let archivo = "";
 
   if (clima.includes("lluvia") || clima.includes("rain")) {
-    archivo = "sounds/lluvia.m4a";
+    archivo = "sounds/lluvia.mp3";
   } else if (clima.includes("nieve") || clima.includes("snow")) {
     archivo = "sounds/nieve.m4a";
   } else if (clima.includes("soleado") || clima.includes("sun") || clima.includes("despejado")) {
