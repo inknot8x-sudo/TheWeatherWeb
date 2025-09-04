@@ -1,0 +1,221 @@
+body {
+    font-family: sans-serif;
+    background: linear-gradient(135deg, #2193b0, #6dd5ed);
+    color: #fff;
+    margin: 0;
+    padding: 40 px 20px;
+    min-height: 100vh;
+}
+
+/*Container principal*/
+.container {
+    max-width: 400px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0,0, 0, 0.2);
+    z-index: 1;
+    position: relative;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+  background: transparent; /* Quitar fondo si molesta */
+  box-shadow: none;         /* Quitar sombras si estás usando neumorfismo */
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* ← importante */
+  padding: 10px 20px;
+  background: #f1f4f9;
+  border-radius: 50px;
+  box-shadow: 6px 6px 12px #d1d9e6, -6px -6px 12px #ffffff;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px 0;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.search-icon {
+  width: 30px;
+  height: 20px;
+  fill: #333;
+  margin-right: 15px;
+}
+
+.result {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease-in-out;
+  animation: fadeIn 0.6s ease;
+}
+
+.result h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.result img {
+  width: 64px;
+  height: 64px;
+}
+
+.result p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilo por defecto (día) */
+body.day {
+  background: linear-gradient(135deg, #2193b0, #6dd5ed);
+  color: #fff;
+}
+
+/* Estilo noche */
+body.night {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #e0e0e0;
+}
+
+/* Ajuste para tarjeta de resultado */
+body.night .result {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+body.day .result {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+#particles-container canvas {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 0 !important;
+  opacity: 1 !important;
+  pointer-events: none !important;
+}
+
+.forecast-section {
+  margin-top: 50px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  color: #fff;
+  text-align: center;
+}
+
+.forecast-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.forecast-block {
+  margin-bottom: 40px;
+}
+
+.forecast-block h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #e0e0e0;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.forecast-item {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.forecast-item:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.forecast-item img {
+  width: 48px;
+  height: 48px;
+  margin: 10px 0;
+}
+
+.hour-time,
+.day-date {
+  font-weight: 600;
+  font-size: 15px;
+  color: #fff;
+}
+
+.temp {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.desc {
+  font-size: 12px;
+  color: #ddd;
+  text-align: center;
+}
+
+/* Responsive para móviles */
+@media (max-width: 600px) {
+  .forecast-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Weather</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div id="particles-container"></div>
+    <div class="container">
+        <h1>Consulta el Clima</h1>
+        <form id="weatherForm" class="search-container">
+            <input
+                id="cityInput"
+                class="search-input"
+                type="text"
+                placeholder="Escribe una ciudad..."
+                required
+            />
+            <button type="submit" class="search-button">
+                <svg class="search-icon" viewBox="0 0 24 24">
+                <path d="M21.53 20.47l-3.66-3.66A8.94 8.94 0 0019 10a9 9 0 10-9 9 8.94 8.94 0 006.81-3.13l3.66 3.66a.75.75 0 001.06-1.06zM10 17.5A7.5 7.5 0 1117.5 10 7.51 7.51 0 0110 17.5z" />
+                </svg>
+            </button>
+        </form>
+        <div id="result" class="result hidden"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+    <script src="script.js" defer></script>
+
+    <section id="forecast" class="forecast-section hidden">
+        <h2>📅 Pronóstico</h2>
+
+        <div class="forecast-block">
+            <h3>Hoy</h3>
+            <div id="hourlyForecast" class="forecast-grid"></div>
+        </div>
+
+        <div class="forecast-block">
+            <h3>Próximos días</h3>
+            <div id="dailyForecast" class="forecast-grid"></div>
+        </div>
+    </section>
+
+</body>
+
+</html>
